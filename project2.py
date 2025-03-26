@@ -46,10 +46,6 @@ def generate_barcode(data, filename):
     img.save(filename)
     print(f"Barcode saved as {filename}")
 
-def generate_qrcode(data, filename):
-    img = qrcode.make(data)
-    img.save(filename)
-    print(f"QR Code saved as {filename}")
 
 def generate_password(length):
     characters = string.ascii_letters + string.digits + string.punctuation
