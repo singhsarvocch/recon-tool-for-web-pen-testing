@@ -23,18 +23,7 @@ def ip_scanner(ip_range):
             pass
     return active_ips
 
-def port_scanner(ip, ports):
-    print("Scanning ports...")
-    open_ports = []
-    for port in ports:
-        try:
-            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                s.settimeout(1)
-                if s.connect_ex((ip, port)) == 0:
-                    open_ports.append(port)
-        except socket.error:
-            pass
-    return open_ports
+
 
 def generate_barcode(data, filename):
     qr = qrcode.QRCode(
